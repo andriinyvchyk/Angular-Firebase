@@ -1,0 +1,58 @@
+<div class="container">
+    <h3 class="cardH3">Cart</h3>
+    <div *ngIf="noProd" class="noCard">
+        <p>Your cart is currently empty.</p>
+    </div>
+    <div *ngIf="!noProd" class="containerBlock d-flex justify-content-between">
+        <div class="card">
+            <table class="table">
+                <thead>
+                    <tr *ngFor="let item of card">
+                        <th class="align-middle"><i (click)="delProd(item.id)" class="far fa-trash-alt"></i></th>
+                        <th class="align-middle"><img class="imgCard" src="{{item.img}}" alt="{{item.img}}"></th>
+                        <th class="align-middle"><a class="active" href="#">{{item.name}}</a></th>
+                        <th class="align-middle"><span>{{item.price | currency}}</span></th>
+                        <th class="align-middle">
+                            <div class="number">
+                                <button class="btn-minus" type="button" (click)="counterMinus(item.id)"><i
+                                        class="fas fa-minus"></i></button>
+                                <span style="margin: 0 10px;">{{item.countProd}}</span>
+                                <button class="btn-plus" type="button" (click)="counterPlus(item.id)"><i
+                                        class="fas fa-plus"></i></button>
+                            </div>
+                        </th>
+                        <th class="align-middle"><span>{{item.price * item.countProd | currency}}</span></th>
+                    </tr>
+                </thead>
+            </table>
+            <div class="card-body">
+                <h4>Coupon:</h4>
+                <form class="form-inline">
+                    <div class="form-group mb-2 mr-1">
+                        <input type="text" class="form-control" placeholder="coupon">
+                    </div>
+                    <button type="button" class="btn appCoupBtn mb-2">Apply Coupon</button>
+                </form>
+            </div>
+        </div>
+        <div class="cardOrders">
+            <h3>Cart Totals</h3>
+            <table class="table table-bordered">
+                <tbody>
+                    <tr>
+                        <th scope="row">Subtotal</th>
+                        <td>{{total | currency}}</td>
+                    </tr>
+                    <tr class="thss">
+                        <th scope="row">Total</th>
+                        <td> <h4> {{total | currency}}</h4></td>
+                    </tr>
+                </tbody>
+            </table>
+            <button [routerLink]="[ '/checkout' ]" type="button" class="btn btn-lg checkoutBtn">
+                <i class="fas fa-cart-plus"></i> Proceed to
+                checkout <i class="far fa-arrow-alt-circle-right"></i>
+            </button>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,161 @@
+*{
+    outline: 0 !important;
+}
+.containerMain{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 35px;
+    width: 100%;
+}
+.filters{
+    width: 25%;
+}
+.custom-slider .ng5-slider .ng5-slider-selection {
+    background: #dc2400 !important;
+}
+.custom-slider  .ng5-slider .ng5-slider-pointer{
+    width: 16px;
+    height: 16px;
+    top: -6px;
+    background-color: #dc2400;
+}
+.custom-slider .ng5-slider .ng5-slider-pointer:after{
+    top: 4px;
+    left: 4px;
+}
+.custom-slider .ng5-slider .ng5-slider-span .ng5-slider-pointer .ng5-slider-pointer-max{
+    left: 266px;
+}
+.contentMain{
+    width: 70%;
+}
+.imgLogoShop{
+    width: 100%;
+    height: 350px;
+    background: url('https://ogo.kutethemes.net/wp-content/themes/ogo/assets/images/shopbanner.jpg');
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.searcBtnInput:hover{
+    background-color: #777;
+    border-color: #777;
+    transition: all 1s;
+}
+.btn:active, .btn:focus,  .searcBtnInput:active, .searcBtnInput:focus{
+    outline: none !important;
+    outline-style: none;
+    outline-width: 0px !important;
+    outline-color: none !important;
+  }
+.searcBtnInput{
+    border-radius: 5px;
+    color: white;
+    background-color: #dc2400;
+    border-color: #dc2400;
+    max-height: 50px;
+    float: right;
+    padding: 0 30px;
+    line-height: 43px;
+    margin-bottom: 10px;
+}
+.filterPrice{
+    margin-bottom: 60px;
+}
+.line{
+    width: 100%;
+    height: 1px;
+    background-color: lightgrey;
+}
+.filterCataloge{
+    margin-top: 20px;
+}
+.itemCat{
+    color: #999999;
+    font-size: 13px;
+    text-transform: uppercase;
+}
+.itemCat:hover{
+    text-decoration: none;
+    transition: all 0.8s;
+    color: red;
+}
+.itemComm{
+    display: block;
+    color: #222222;
+    font-size: 16px;
+}
+.itemComm:hover{
+    color: red;
+    text-decoration: none;
+    transition: all .5s ease;
+}
+.itemPrice{
+    margin-top: 20px;
+    font-size: 18px;
+    font-weight: 600;
+    color: #222;
+}
+.card-body{
+    max-height: 180px;
+}
+.card{
+    max-width: 30%;
+    margin-right: 25px;
+}
+.card::after{
+    width: 10px;
+    height: 10px;
+    background-color: grey;
+}
+.card:hover{
+    border: 1px solid red;
+
+}
+.commodity{
+    margin-bottom: 80px;
+}
+.card-img-top{
+    width: 80%;
+    height: 210px;
+}
+.commodity .card-img-top{
+    margin: 10px auto;
+}
+.custom-slider .ng5-slider .ng5-slider-model-value, .custom-slider .ng5-slider .ng5-slider-model-high,.custom-slider .ng5-slider .ng5-slider-floor,
+.custom-slider .ng5-slider .ng5-slider-ceil,
+.custom-slider .ng5-slider .ng5-slider-combined {
+    display: none;
+  }
+
+
+
+  .box-label input[type="checkbox"] {
+    display: none;
+}
+.box-label {
+    display: block;
+    cursor: pointer;
+}
+#checkbox:checked + .box::before {
+    content: "\f14a";
+    color: #1e88e5;
+    animation: checkanimate 200ms;
+}
+.box::before {
+    content: "\f096";
+    font-family: "FontAwesome";
+    font-weight: normal;
+    font-style: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    width: 1em;
+    display: inline-block;
+    font-size: 1.6em;
+}
+@keyframes checkanimate{
+    0% {transform: scale(0);}
+    90% {transform: scale(1.4);}
+    100% {transform: scale(1);}
+}
+  

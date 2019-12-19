@@ -1,0 +1,36 @@
+.container{
+    margin-bottom: 800px;
+}
+.container h3{
+    margin-top: 50px;
+}
+.ctn-info {
+    margin-top: 50px;
+}
+.blockLeft{
+    width: 20%;
+}
+.blockRight{
+    width: 75%;
+}
+.blockLeft ul{
+    width: 255px;
+    background-color: #f9f9f9;
+    box-shadow: 0 0 5px rgba(0,0,0,0.5);
+}
+.blockLeft ul li{
+    border-bottom: 1px solid lightgrey;
+    transition: 1s;
+}
+.blockLeft ul li:hover{
+   background-color: rgb(185, 182, 182);
+}
+.blockLeft ul li a:hover{
+    color: white;
+ }
+.blockLeft ul li a{
+    color:#444444;
+}
+.active{
+    background-color: rgb(185, 182, 182);
+}

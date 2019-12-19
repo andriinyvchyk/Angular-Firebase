@@ -1,0 +1,28 @@
+<div class="container d-flex mt-5 justify-content-between mb-5">
+    <div class="blockLeft">
+        <div class="container-catelegy mt-4">
+            <div class="header">
+                <h3 class="pt-2">Catelogies</h3>
+            </div>
+            <div class="mainCatelogy">
+                <div class="link mt-4">
+                    <a class="d-block" *ngFor="let item of getBlogsCat; let i=index"
+                        [routerLink]="[ '/blog', item.nameCategory]">{{item.nameCategory}}</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="blockRight">
+        <div class="blogs mt-5 d-flex justify-content-between flex-wrap">
+            <div *ngFor="let item of getBlogs let i=index;" class="posts">
+                <div class="imgPosts">
+                    <img [routerLink]="[ '/blog', item.postCate, item.id]" class="imgLogoPost" src="{{item.img}}" alt="{{item.img}}">
+                </div>
+                <span class="post-date"><i class="fas fa-calendar-week"></i> {{item.date}} </span>
+                <span [routerLink]="[ '/blog', item.postCate, item.id]" class="nameComm">{{item.title}}</span>
+                <p class="description">{{item.text}}</p>
+                <a [routerLink]="[ '/blog', item.postCate, item.id]">Read More...</a>
+            </div>
+        </div>
+    </div>
+</div>

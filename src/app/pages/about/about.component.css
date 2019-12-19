@@ -1,0 +1,30 @@
+.settingBlock{
+    width: 250px;
+    text-align: center;
+    height: 322px;
+    margin-right: 30px;
+}
+.settingBlock:hover{
+    border: 1px solid lightgrey;
+    border-radius: 5px;
+}
+.settingBlock img{
+    margin: 50px;
+}
+.textAbout{
+    width: 63%;
+}
+.text{
+    color: #666666;
+}
+.settI{
+    font-size: 46px;
+    color: red;
+}
+.fontIcons{
+    font-size: 46px;
+    padding-right: 35px;
+}
+.ctn-contact{
+    margin-top: 40px;
+}

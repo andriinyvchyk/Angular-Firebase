@@ -1,0 +1,110 @@
+<div class="container-scroller">
+    <div class="containerLeftRight">
+
+        <div class="content-left">
+            <div class="person">
+                <div class="logo">
+                    LOGO
+                </div>
+
+                <img width="70px" height="70px"
+                    src="https://lh3.googleusercontent.com/-PYwST6A3Krs/VeBsLHUT8xI/AAAAAAAAADs/CgaslAuExo4YUz1QQU7HRkMHw0NOVXKjwCEwYBhgL/w140-h140-p/e64VKLqtSIo.jpg"
+                    alt="..." class="rounded-circle">
+                <p class="name">{{user?.displayName }}</p>
+                <p class="admin">Super admin</p>
+            </div>
+
+            <div class="nav flex-column" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+                <ul class="nav flex-column">
+                    <li class="nav-item">
+                        <a class="nav-link" data-toggle="pill" routerLinkActive="active" routerLink="dashboard">
+                            <i class="fas fa-rocket menu-icon"></i>
+                            <span>Dashboard</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" data-toggle="pill" routerLinkActive="active" routerLink="blogs">
+                            <i class="far fa-file-alt menu-icon"></i>
+                            <span>Blogs</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" data-toggle="pill" routerLinkActive="active" routerLink="posts">
+                            <i class="fas fa-mail-bulk menu-icon"></i>
+                            <span>Posts</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" data-toggle="pill" routerLinkActive="active" routerLink="category">
+                            <i class="fas fa-layer-group menu-icon"></i>
+                            <span>Category</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" data-toggle="pill" routerLinkActive="active" routerLink="subscribe">
+                            <i class="far fa-envelope menu-icon"></i>
+                            <span>Subscribe</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" data-toggle="pill" routerLinkActive="active" routerLink="commodity">
+                            <i class="fas fa-shopping-basket menu-icon"></i>
+                            <span>Commodity</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" data-toggle="pill" routerLinkActive="active" routerLink="orders">
+                            <i class="fas fa-money-bill-wave menu-icon"></i>
+                            <span>Orders</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" data-toggle="pill" routerLinkActive="active" routerLink="users">
+                            <i class="fas fa-user-friends menu-icon"></i>
+                            <span>Users</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="container-navbar">
+
+            <div class="navbar-menu-wrapper">
+                <div class="signOut">
+                    <a class="nav-link" data-toggle="pill" routerLink="home">
+                        <i class="fas fa-sign-in-alt text-white"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="tab-content">
+                <router-outlet></router-outlet>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<!-- <div class="container-fluid">
+
+    <div class="row">
+        <div class="col-2 mt-2">
+            
+            <div class="nav flex-column nav-pills bg-dark" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+                    <a class="blockSetting text-white">Setting</a>
+
+                <a class="nav-link" routerLinkActive="active" data-toggle="pill" routerLink="category"
+                    role="tab">Category</a>
+                <a class="nav-link" routerLinkActive="active" data-toggle="pill" routerLink="commodity"
+                    role="tab">Сommodity</a>
+                <a class="nav-link" routerLinkActive="active" data-toggle="pill" routerLink="blogs" role="tab">Blogs</a>
+                <a class="nav-link" routerLinkActive="active" data-toggle="pill" routerLink="subscribe"
+                    role="tab">Subscribe</a>
+            </div>
+        </div>
+        <div class="col-10 mt-2">
+            <div class="tab-content">
+                <router-outlet></router-outlet>
+            </div>
+        </div>
+    </div>
+</div> -->

@@ -1,0 +1,64 @@
+<div class="container d-flex mt-5 justify-content-between mb-5">
+    <div class="blockLeft">
+        <div class="container-catelegy mt-4">
+            <div class="header">
+                <h3 class="pt-2">Catelogies</h3>
+            </div>
+            <div class="mainCatelogy">
+                <div class="link mt-4">
+                    <a class="d-block" *ngFor="let item of getBlogsCat; let i=index"
+                        [routerLink]="[ '/blog', item.nameCategory]">{{item.nameCategory}}</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="blockRight">
+        <h1>{{post?.title}}</h1>
+        <span class="post-dateInfo"><i class="fas fa-calendar-week"></i> {{post?.date}} </span>
+        <span class="ml-5"><i class="far fa-user"></i> Post By {{post?.author}}</span>
+        <div class="imglogo">
+            <img src="{{post?.img}}" alt="">
+        </div>
+        <div class="infoPost d-flex">
+            <div class="share d-block">
+                <span>share</span>
+                <div class="iconsNetw"><i class="font26 fab fa-twitter"></i></div>
+                <div class="iconsNetw"><i class="font26 fab fa-facebook-f"></i></div>
+                <div class="iconsNetw"><i class="font26 fab fa-google-plus-g"></i></div>
+                <div class="iconsNetw"><i class="font26 fab fa-pinterest"></i></div>
+            </div>
+            <div class="postDescription">{{post?.text}}</div>
+        </div>
+        <span class="categoriesLink">Categories: {{post?.postCate}}</span>
+
+        <h3 *ngIf="numberComment > 0" class="h3Comment">{{numberComment}} Comment</h3>
+
+        <div *ngFor="let item of post?.postNotes" class="comment-info">
+            <div class="ctnComment d-flex">
+                <img src="http://2.gravatar.com/avatar/5f1eebf443d9f2a4a1007236c08cad1c?s=250&d=mm&r=g" width="69px"
+                    height="69px" alt="">
+                <div class="box">
+                    <span class="d-block">{{item.author}}</span>
+                    <span class="date">{{item.date}}</span>
+                    <p (click)="deleteComment(item)">Удалить</p>
+                </div>
+            </div>
+            <div class="comment">
+                <p>{{item.text}}</p>
+            </div>
+        </div>
+        <div class="line"></div>
+        <div *ngIf="user" class="leaveAComent">
+            <h2>Leave a comment</h2>
+            <p>Your email address will not be published. Required fields are marked *</p>
+            <form #form="ngForm" autocomplete="off" (submit)="onSubmit(form)">
+                <div class="form-group">
+                    <label>Order notes (optional)</label>
+                    <textarea #postNotes="ngModel" name="postNotes" [(ngModel)]="formData.postNotes"
+                        class="form-control" rows="5"></textarea>
+                </div>
+                <button type="button" (click)="onSubmit(form)" class="btn appCoupBtn mb-2">POST COMENT</button>
+            </form>
+        </div>
+    </div>
+</div>

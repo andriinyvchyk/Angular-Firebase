@@ -1,0 +1,33 @@
+.container{
+    background-color: white;
+    margin-top: 2%;
+    padding: 4%;
+}
+.text{
+    margin-top: 1%;
+    color: #13b4ca;
+    text-align: center;
+}
+ul{
+    list-style-type: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+.fas:hover{
+    color: blue;
+}
+input[type="text"], input[type="email"],textarea{
+    border: 1px solid #e5e5e5;
+    padding: 9px 20px;
+    font-size: 14px;
+    line-height: 20px;
+    max-width: 100%;
+    background: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    outline: none;
+    height: 40px;
+    outline: 0 !important;
+    box-shadow: none;
+}

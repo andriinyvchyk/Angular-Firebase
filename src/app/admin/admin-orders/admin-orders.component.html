@@ -1,0 +1,53 @@
+<h3 class="text">Orders</h3>
+<div class="container">
+    <div class="infoOrder">
+        <div class="orderStyle d-flex justify-content-between">
+            <a>Orders</a>
+            <span>Users</span>
+            <span>Data</span>
+            <span>Price</span>
+        </div>
+
+
+        <div *ngFor="let item of getBdOrders; let i=index" class="order d-flex justify-content-between"
+            (click)="modalOpens(item.id)">
+            <a>Order №{{i+1}}</a>
+            <span>{{item.firstName}}</span>
+            <span>{{item.dataOrder}}</span>
+            <span>{{item.productOrderPrice | currency}}</span>
+        </div>
+    </div>
+</div>
+<div *ngIf="modalOpen" class="modalOrdersDetails">
+    <div class="show">
+        <div *ngFor="let item of ordersAdmin?.productOrder; let i=index" class="d-flex">
+            <div class="blockLeft">
+                <img src="{{item?.img}}" alt="{{item?.name}}">
+            </div>
+            <div class="blockRight">
+                <h4>{{item?.name}}</h4>
+                <h4>Count: {{item?.countProd}}</h4>
+            </div>
+        </div>
+        <h4 class="text-center">Information Users</h4>
+        <p class="text-center">
+            {{ordersAdmin?.firstName}} <br>
+            {{ordersAdmin?.lastName}} <br>
+            {{ordersAdmin?.companyName}} <br>
+            {{ordersAdmin?.country}} <br>
+            {{ordersAdmin?.streetAddress}} <br>
+            {{ordersAdmin?.suite}} <br>
+            {{ordersAdmin?.townCity}} <br>
+            {{ordersAdmin?.stateCounty}} <br>
+            {{ordersAdmin?.postcode}} <br>
+            {{ordersAdmin?.phone}} <br>
+            {{ordersAdmin?.email}} <br>
+            {{ordersAdmin?.orderNotes}} <br>
+            All <strong>{{ordersAdmin?.productOrderPrice | currency}}</strong><br>
+        </p>
+        <div class="containerBTN">
+            <button (click)="success()" type="button" class="btn btn-success">Success</button>
+            <button (click)="closeModal()" type="button" class="btn btn-secondary">Close</button>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,91 @@
+.ctn-footer{
+    height: 800px;
+    background-color: #f8f8f8;
+    padding: 1px;
+}
+.blockOne{
+    margin-top: 80px;
+}
+.searcBtnInput:hover{
+    background-color: #777;
+    border-color: #777;
+    transition: all 1s;
+}
+.searcBtnInput{
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 0;
+    border-top-left-radius: 0;
+    color: white;
+    background-color: #dc2400;
+    border-color: #dc2400;
+    max-height: 50px;
+}
+.fab{
+    font-size: 20px;
+    margin: 20px 15px 0 0;
+    padding: 14px;
+}
+.fab:hover{
+    background-color: white;
+    color: #dc2400;
+    border-radius: 5px;
+}
+.line{
+    margin: 0 auto;
+    width: 98%;
+    height: 1px;
+    background-color: lightgrey;
+}
+.containerColons{
+    width: 98%;
+    margin: 50px 20px;
+    
+}
+.containerColons h5{
+    margin-bottom: 40px;
+}
+.containerColons a{
+    display: block;
+    text-decoration: none;
+    font-size: 14px;
+    color: #777777;
+    margin-top: 10px;
+}
+.containerColons a:hover{
+    color: #dc2400;
+}
+.contacts{
+    width: 20%;
+}
+.contacts p{
+    margin-top: 10px;
+    font-size: 14px;
+    color: #777777;
+}
+.phoneContacts i{
+    font-size: 46px;
+    color: #dc2400;
+}
+.phoneContacts p{
+    font-size: 16px;
+}
+.callUsNow{
+    line-height: 0.1;
+}
+.callUsNow h6{
+    line-height: 1.0;
+}
+.phoneContacts{
+    padding: 30px 0 30px;
+}
+.containerLastInfo{
+    margin: 70px 20px 0;
+}
+.containerLastInfo p{
+    font-size: 14px;
+    color: #777777;
+}
+.form-control{
+    width: 100%;
+}

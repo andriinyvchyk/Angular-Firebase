@@ -1,0 +1,138 @@
+
+.header{
+    height: 42px;
+    background-color: #777777;
+    color: white;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+.header h3{
+    font-size: 18px;
+}
+.mainCatelogy{
+    min-height: 300px;
+    border: 1px solid lightgrey;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+.link a{
+    text-decoration: none;
+    color: #666666;
+}
+
+.header h3, .link a{
+    margin-left: 40px;
+}
+.blockLeft{
+    width: 26%;
+}
+.blockRight{
+    width: 70%;
+}
+.posts{
+    width: 48%;
+    border: none;
+}
+.imgPosts{
+    width: 100%;
+    height: 265px;
+    display: inline-block;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+.imgLogoPost{
+    width: 100%;
+    transition: 1s;
+}
+.imgLogoPost:hover{
+    cursor: pointer;
+    transform: scale(1.2);
+}
+.post-date, .post-dateInfo{
+    position: relative;
+    left: -10px;
+    top: -40px;
+    font-size: 12px;
+    color: white;
+    background-color: red;
+    padding: 1px 20px;
+}
+.post-dateInfo{
+    left: 0;
+    top: 0;
+    padding: 4px 40px;
+}
+.nameComm{
+    font-weight: 600;
+    font-size: 22px;
+    color: #333333;
+}
+.nameComm:hover{
+    color: red;
+    cursor: pointer;
+}
+.posts a{
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 15px;
+    color: #333333;
+}
+.posts .description{
+    margin: 0;
+    padding: 0;
+    font-size: 14px;
+    line-height: 24px;
+    height: 50px;
+    overflow: hidden;
+}
+.imglogo img{
+    margin-top: 30px;
+    width: 100%;
+    height: 409px;
+    background-size: cover;
+} 
+.infoPost{
+    margin-top: 30px;
+    margin-bottom: 25px;
+}
+.share{
+    width: 20%;
+}
+.postDescription{
+    width: 80%;
+}
+.iconsNetw{
+    cursor: pointer;
+    width: 46px;
+    height: 46px;
+    background-color: red;
+    margin-top: 5px;
+}
+.line{
+    width: 100%;
+    height: 1px;
+    background-color: grey;
+}
+.appCoupBtn{
+    padding: 10px 60px;
+    color: white;
+    background-color: #dc2400;
+    border-color: #dc2400;
+}
+.appCoupBtn:hover{
+    background-color: #777;
+    border-color: #777;
+    transition: all 1s;
+}
+.font26{
+    margin: 10px;
+    font-size: 26px;
+    color: white;
+}
+
+.line, .leaveAComent{
+    margin-top: 50px;
+}
+.leaveAComent{
+    margin-bottom: 60px;
+}

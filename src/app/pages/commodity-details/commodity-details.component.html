@@ -1,0 +1,104 @@
+<div class="container d-flex">
+    <div class="blockLeft">
+        <img class="imgLogo" src="{{product?.img}}" alt="{{product?.name}}">
+    </div>
+    <div class="blockRight">
+        <h1>{{product?.name}}</h1>
+        <div class="line mt-3"></div>
+        <h4 class="mt-2 mb-5">{{product?.price | currency}}</h4>
+        <span>
+            <!-- {{product?.description}} -->
+            Processor: 2.7 GHz Intel Pentium II Xeon
+            RAM: 32 GB ddr3_sdram
+            Hard Drive: 256 GB SSD
+            Graphics Coprocessor: AMD FirePro D500
+            Card Description: dedicated
+            Graphics Card Ram Size: 6 GB
+        </span>
+        <div class="counter mt-5">
+            <form>
+                <div class="d-flex">
+                    <span class="qty">
+                        Qty
+                    </span>
+                    <div class="number">
+                        <button class="btn-minus" type="button" (click)="counterMinus()"><i
+                                class="fas fa-minus"></i></button>
+                        <span style="margin: 0 10px;">{{counter}}</span>
+                        <button class="btn-plus" type="button" (click)="counterPlus()"><i
+                                class="fas fa-plus"></i></button>
+                    </div>
+                    <button (click)="addComm()" class="btn addToCard" type="button">Add</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<div class="cnt d-block">
+    <!-- <div class="containerInfo d-flex">
+        <h1>Description</h1>
+        <h1>Reviews</h1>
+    </div>
+    <div class="containerTextInfo d-block">asdasdas</div> -->
+    <div class="containerInfo d-flex">
+        <a (click)="btnDescription()" [ngClass]="{infoAActive:!checkBtn}" class="infoA">Description</a>
+        <a (click)="btnReviews()" [ngClass]="{infoAActive:checkBtn}" class="infoA">Reviews</a>
+    </div>
+    <div class="collapse d-block">
+        <div *ngIf="!checkBtn" class="card card-body">
+            the next-generation Quad-Core Intel Xeon processors and new system architecture, the Mac Pro now delivers
+            performance thatʼs nearly twice as fast as before.(1) Each processor features an integrated memory
+            controller and 8MB of fully shared L3 cache. With blazing-fast 1066MHz DDR3 ECC SDRAM, high-performance
+            graphics, a redesigned interior for easier expansion, itʼs the most advanced Mac Pro ever. *** The newest
+            Mac Pro is all about power. Inside its completely redesigned case, Apple’s flagship quad core desktop is
+            equipped with the most advanced Intel processors, dual GPUs, and next-generation flash storage, to guarantee
+            a blazing performance even for the most processing-intensive tasks. The Mac Pro quad core model features the
+            latest Intel Xeon E5 processor, supported by a four-channel memory controller that enables a memory
+            bandwidth of 60GB/s. With this much speed backing them up, the new Mac Pro’s quad core processors hardly
+            ever slow down, whether you’re streaming HD videos or browsing your massive media library. Dual AMD FirePro
+            GPUs make the most of the speed of the Mac Pro’s Intel quad core processor, allowing simultaneous
+            full-resolution 4K video editing and effects rendering. Next-generation PCIe-based flash storage boosts the
+            Mac Pro’s speed, so accessing large files and booting up resource-heavy applications take no time at all.
+            Processor: 2.7 GHz Intel Pentium II Xeon
+            RAM: 32 GB ddr3_sdram
+            Hard Drive: 256 GB SSD
+            Graphics Coprocessor: AMD FirePro D500
+            Card Description: dedicated
+            Graphics Card Ram Size: 6 GB
+        </div>
+        <div *ngIf="checkBtn" class="card card-body">
+            <h3 class="textReviesH3">Reviews</h3>
+            <p class="textRevies">There are no reviews yet.</p>
+            <h3 class="textReviesH3">Be the first to review {{product?.name}}</h3>
+            <p class="textRevies">Your email address will not be published. Required fields are marked *</p>
+            <form>
+                <div class="form-group">
+                    <label>Name</label>
+                    <input type="text" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label>Email</label>
+                    <input type="text" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label>Your review</label>
+                    <textarea class="form-control" rows="5"></textarea>
+                </div>
+
+                <button type="submit" class="btn submitReviews">Submit</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+<div *ngIf="notice" class="notice">
+    <p class="noticeP"><i>Notice!</i></p>
+    <div class="contentNotice d-flex">
+        <div class="img">
+            <img src="{{product.img}}" alt="{{product.name}}">
+        </div>
+        <div class="infoProd">
+            <p>{{product.name}} <br>Product has been added to card <br><a routerLink="/mycard"><b>View card</b></a></p>
+        </div>
+    </div>
+</div>

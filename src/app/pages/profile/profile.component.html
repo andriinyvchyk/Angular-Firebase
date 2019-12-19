@@ -1,0 +1,24 @@
+<div class="container">
+    <h3>Customer Information</h3>
+    <div class="ctn-info d-flex justify-content-between">
+        <div class="blockLeft">
+            <div>
+                <ul class="nav flex-column">
+                    <li class="nav-item">
+                        <a class="nav-link" routerLinkActive="active" routerLink="myinfo">
+                            Information User
+                        </a>
+                    </li>
+                    <li *ngIf="users?.admin > 0" class="nav-item">
+                        <a class="nav-link" routerLinkActive="active" routerLink="/admin">
+                            Admin Panel
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="blockRight">
+            <router-outlet></router-outlet>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,9 @@
+.ng5-slider .ng5-slider-pointer{
+    width: 16px;
+    height: 16px;
+    top: -14px;
+    background-color: #dc2400;
+}
+.ng5-slider .ng5-slider-selection{
+    background-color: #dc2400;
+}

@@ -1,0 +1,47 @@
+<div class="container">
+    <div class="containerMain">
+        <div class="filters">
+            <h4>Filter By Prices</h4>
+            <div class="custom-slider">
+                <ng5-slider [(value)]="value" [(highValue)]="highValue" [options]="options">
+
+                </ng5-slider>
+            </div>
+            <div class="filterPrice">
+                <span class="filterPrice">Price: £{{value}} — £{{highValue}}</span>
+                <button class="btn searcBtnInput" (click)="filter()" type="button">Filter</button>
+            </div>
+            <div class="line"></div>
+            <div class="filterCataloge">
+                <h4>Filter By Cataloge</h4>
+                <div class="custom-checkbox mb-3 d-block">
+                    <label *ngFor="let item of getCategory; let i=index" class="box-label">
+                        <input (click)="onCheckBoxChange($event.target)" type="checkbox" id="checkbox"
+                            value="{{item.nameCategory}}" name="{{item.nameCategory}}" #checkbox>
+                        <span class="box">{{item.nameCategory}}</span>
+                    </label>
+                </div>
+            </div>
+        </div>
+
+        <div class="contentMain">
+            <div class="imgLogoShop"></div>
+            <div class="content">
+                <h5>Showing 1–10 of 29 results</h5>
+                <div class="line"></div>
+                <div class="commodity d-flex justify-content-start flex-sm-wrap">
+                    <div *ngFor="let item of filterPRod | filterByProd:searchTerm | filterByProd:searchTerm1"
+                        [routerLink]="[ '/shop', item.nameCategory, item.id ]" class="card mt-4" style="width: 18rem;">
+                        <img src="{{item.img}}" class="card-img-top" alt="{{item.name}}">
+                        <div class="card-body">
+                            <a [routerLink]="[ '/shop', item.nameCategory ]" class="itemCat">{{item.nameCategory}}</a>
+                            <a [routerLink]="[ '/shop', item.nameCategory, item.id ]" class="itemComm">{{item.name}}</a>
+                            <p class="card-text itemPrice">{{item.price | currency }}</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- <ngb-pagination class="d-flex justify-content-center" [collectionSize]="pager.totalItems" [pageSize]="pager.pageSize" [(page)]="pager.currentPage" [boundaryLinks]="true" (pageChange)="setPage($event)"></ngb-pagination> -->
+            </div>
+        </div>
+    </div>
+</div>

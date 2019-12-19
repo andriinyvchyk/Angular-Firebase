@@ -1,0 +1,131 @@
+<div class="container">
+    <h2>Checkout</h2>
+    <div *ngIf="!success" class="show">
+        <div class="containerGroup d-flex justify-content-between">
+            <div class="blockLeft">
+                <h3 class="h3">Billing Details</h3>
+                <form #form="ngForm" autocomplete="off" (submit)="onSubmit(form)">
+                    <div class="form-group">
+                        <label>First name</label>
+                        <input type="text" #firstName="ngModel" name="firstName" [(ngModel)]="formData.firstName"
+                            class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label>Last name</label>
+                        <input type="text" #lastName="ngModel" name="lastName" [(ngModel)]="formData.lastName"
+                            class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label>Company name (optional)</label>
+                        <input type="text" #companyName="ngModel" name="companyName" [(ngModel)]="formData.companyName"
+                            class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label>Country</label>
+                        <select #country="ngModel" name="country" [(ngModel)]="formData.country" class="form-control">
+                            <option>Ukraine</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Street address</label>
+                        <input #streetAddress="ngModel" name="streetAddress" [(ngModel)]="formData.streetAddress"
+                            type="text" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label>Apartment, suite, unit etc. (optional) (optional)</label>
+                        <input #suite="ngModel" name="suite" [(ngModel)]="formData.suite" type="text" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label>Town / City</label>
+                        <input #townCity="ngModel" name="townCity" [(ngModel)]="formData.townCity" type="text"
+                            class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label>State / County</label>
+                        <input #stateCounty="ngModel" name="stateCounty" [(ngModel)]="formData.stateCounty" type="text"
+                            class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label>Postcode / ZIP</label>
+                        <input #postcode="ngModel" name="postcode" [(ngModel)]="formData.postcode" type="text"
+                            class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label>Phone</label>
+                        <input #phone="ngModel" name="phone" [(ngModel)]="formData.phone" type="text" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label>Email address</label>
+                        <input #email="ngModel" name="email" [(ngModel)]="formData.email" type="email" class="form-control">
+                    </div>
+                </form>
+            </div>
+            <div class="blockRight">
+                <h3 class="h3">Additional Information</h3>
+                <div class="form-group">
+                    <label>Order notes (optional)</label>
+                    <textarea name="orderNotes" [(ngModel)]="orderNotes" class="form-control"
+                        rows="5"></textarea>
+                </div>
+            </div>
+        </div>
+        <h3 class="h3">Your Order</h3>
+        <div class="blockOrders">
+            <div class="cntBO">
+                <table class="table table-bordered">
+                    <tbody>
+                        <tr>
+                            <th scope="row">Product</th>
+                            <th>Total</th>
+                        </tr>
+                        <tr *ngFor="let item of card" class="thss">
+                            <td>{{item.name}} × {{item.countProd}}</td>
+                            <td> <h6>{{item.price * item.countProd | currency}}</h6></td>
+                        </tr>
+                        <tr class="thss">
+                            <td>Subtotal</td>
+                            <td> <h6>{{totalALL | currency}}</h6></td>
+                        </tr>
+                        <tr class="thss">
+                            <th>Total</th>
+                            <td><h5>{{totalALL | currency}}</h5></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <button type="button" (click)="onSubmit(form)" class="btn appCoupBtn mb-2">Place Order</button>
+            </div>
+        </div>
+    </div>
+    <div *ngIf="success" class="hide">
+        <p>Thank you. Your order has been received.</p>
+        <p>Order number: <strong>111</strong> </p>
+        <p>Date: <strong>111</strong></p>
+        <p>Total: <strong>{{totalALL | currency}}</strong></p>
+        <div class="blockOrders">
+                <h3 class="h3OD">Order Details</h3>
+            <div class="cntBO">
+                <table class="table table-bordered">
+                    <tbody>
+                        <tr>
+                            <th scope="row">Product</th>
+                            <th>Total</th>
+                        </tr>
+                        <tr *ngFor="let item of card" class="thss">
+                            <td>{{item.name}} × {{item.countProd}}</td>
+                            <td> <h6>{{item.price * item.countProd | currency}}</h6></td>
+                        </tr>
+                        <tr class="thss">
+                            <td>Subtotal</td>
+                            <td> <h6>{{totalALL | currency}}</h6></td>
+                        </tr>
+                        <tr class="thss">
+                            <th>Total</th>
+                            <td><h5>{{totalALL | currency}}</h5></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <button [routerLink]="[ '/home']" type="button" class="btn appCoupBtn mb-2">HOME</button>
+    </div>
+</div>

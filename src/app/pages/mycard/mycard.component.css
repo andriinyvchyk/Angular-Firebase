@@ -1,0 +1,100 @@
+.card{
+    width: 70%;
+}
+.card-header{
+    background-color: white;
+}
+.card-body, .card-header{
+    height: 138px;
+}
+td{
+    text-align: right;
+    width: 200px;
+}
+.appCoupBtn{
+    color: white;
+    background-color: #dc2400;
+    border-color: #dc2400;
+}
+.appCoupBtn:hover{
+    background-color: #777;
+    border-color: #777;
+    transition: all 1s;
+}
+.checkoutBtn{
+    width: 100%;
+    background-color: #777;
+    border-color: #777;
+    color: white;
+}
+.checkoutBtn:hover{
+    background-color: #dc2400;
+    border-color: #dc2400;
+    transition: all 1s;
+}
+.imgCard{
+    border: 1px solid lightgray;
+    width: 70px;
+    height: 70px;
+}
+.fa-trash-alt:hover{
+    cursor: pointer;
+    color: #dc2400;
+}
+.noCard{
+    margin-bottom: 100px;
+    width: 100%;
+    height: 60px;
+    background-color: #fafafa;
+    border-top: 3px solid #dff0d8;
+}
+.noCard p{
+    margin: 15px 30px;
+}
+.active{
+    text-decoration: none;
+    font-size: 15px;
+    color: #333333;
+}
+.active:hover{
+    color: #dc2400;
+}
+.containerBlock{
+    margin: 20px 0 120px;
+}
+.cardH3{
+    margin-top: 80px;
+}
+.number {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 99px;
+    height: 45px;
+    border-radius: 5px;
+    border: 3px solid lightgray;
+    margin: 0 15px;
+  }
+
+.btn-minus {
+    border: none;
+    background-color: white;
+    margin-left: 2px;
+    outline: none;
+  }
+  
+  .btn-plus {
+    border: none;
+    background-color: white;
+    outline: none;
+  }
+  .fa-plus,
+.fa-minus {
+  color: black;
+}
+.card-body{
+    max-width: 70% !important;
+}
+.card{
+    max-width: 70% !important;
+}

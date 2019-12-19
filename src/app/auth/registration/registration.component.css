@@ -1,0 +1,28 @@
+input[type="text"], input[type="password"], input[type="email"],textarea{
+    border: 1px solid #e5e5e5;
+    padding: 9px 20px;
+    font-size: 14px;
+    line-height: 20px;
+    max-width: 100%;
+    background: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    outline: none;
+    height: 50px;
+    outline: 0 !important;
+    box-shadow: none;
+}
+.btnSubmit{
+    padding: 10px 60px;
+    color: white;
+    background-color: #dc2400;
+    border-color: #dc2400;
+}
+.btnSubmit:hover{
+    background-color: #777;
+    border-color: #777;
+    transition: all 1s;
+}
+.container{
+    margin-bottom: 50px;
+}

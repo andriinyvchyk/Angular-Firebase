@@ -1,0 +1,58 @@
+.container-info{
+    width: 98%;
+    border: 1px solid #f0f0f0;
+    border-radius: 5px;
+    margin: 0 auto;
+    padding: 20px 20px;
+}
+.faIcon{
+    color: #dc2400;
+    font-size: 40px;
+}
+.blockInfo{
+    line-height: 0.8;
+    margin-left: 10px;
+}
+.blockInfoP{
+    font-size: 14px;
+    color: #777;
+}
+.freeShipping, .support, .moneyBack, .days{
+    margin-right: 5px;
+    border-right: 1px solid #777;
+    padding-right: 45px;
+}
+.carousel-prev-icons, .carousel-next-icon{
+    width: 40px;
+    height: 40px;
+    background-color: black;
+}
+.iconsCarousel{
+    color: white;
+    font-size: 34px;
+    margin-top: 3px;
+}
+.carousel-control-next, .carousel-control-prev{
+    width: 8%;
+}
+.carousel-caption {
+    top: 120px;
+}
+.carousel-indicators li{
+    background-color: black;
+}
+.card{
+    width: 14%;
+    margin-left: 15px;
+}
+.container-new-arrivals h2{
+    margin-left: 15px;
+}
+.card-text{
+    font-size: 12px;
+    color: #999999;
+}
+.card-name{
+    font-size: 16px;
+    color: #222222;
+}

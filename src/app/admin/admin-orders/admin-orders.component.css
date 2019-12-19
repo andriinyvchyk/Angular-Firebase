@@ -1,0 +1,87 @@
+.container{
+    background-color: white;
+    margin-top: 2%;
+    padding: 4%;
+    border-radius: 5px;
+    z-index: 10000;
+}
+.text{
+    margin-top: 1%;
+    color: #13b4ca;
+    text-align: center;
+}
+.order, .orderStyle{
+    width: 100%;
+    border-radius: 5px;
+    padding: 9px 25px;
+}
+.order:hover{
+    transition: all 1s;
+    background-color: #39dcf1;
+}
+.box-label input[type="checkbox"] {
+    display: none;
+}
+.box-label {
+    display: block;
+    cursor: pointer;
+}
+#checkbox:checked + .box::before {
+    content: "\f14a";
+    color: #1e88e5;
+    animation: checkanimate 200ms;
+}
+.box::before {
+    content: "\f096";
+    font-family: "FontAwesome";
+    font-weight: normal;
+    font-style: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    width: 1em;
+    display: inline-block;
+    font-size: 1.4em;
+}
+@keyframes checkanimate{
+    0% {transform: scale(0);}
+    90% {transform: scale(1.4);}
+    100% {transform: scale(1);}
+}
+.orderStyle{
+    border-bottom: 1px solid lightgray;
+}
+.modalOrdersDetails{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-height: 1200px;
+    background: rgba(0, 0, 0, 0.5);
+}
+.show{
+    position: absolute;
+    top: 15%;
+    right: 6%;
+    width: 70%;
+    min-height: 200px;
+    background-color: white;
+    z-index: 2;
+    border-radius: 5px;
+}
+.blockLeft, .blockRight{
+    width: 50%;
+    text-align: center;
+}
+.blockLeft img{
+    width: 200px;
+    height: 200px;
+}
+.blockRight h4{
+    line-height: 0.5;
+    margin: 25px 0;
+}
+.containerBTN{
+    float: right;
+    margin-bottom: 10px;
+}
